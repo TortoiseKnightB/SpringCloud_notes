@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource       # 当前数据源操作类型
     driver-class-name: com.mysql.jdbc.Driver         # mysql驱动包
-    url: jdbc:mysql://localhost:3306/springcloud_db_1?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://47.100.93.224:3306/springcloud_db_1?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456Ben
 
@@ -26,7 +26,7 @@ eureka:
   instance:
     instance-id: payment8001
     prefer-ip-address: true     #访问路径可以显示IP地址
-    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
-    lease-renewal-interval-in-seconds: 1
-    #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
-    lease-expiration-duration-in-seconds: 2
+#    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
+#    lease-renewal-interval-in-seconds: 1
+#    #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
+#    lease-expiration-duration-in-seconds: 2
