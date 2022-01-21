@@ -9,7 +9,6 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 
 
-
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
@@ -60,6 +59,7 @@ public class FlowLimitController {
     @SentinelResource(value = "testHotKey", blockHandler = "dealHandler_testHotKey")
     public String testHotKey(@RequestParam(value = "p1", required = false) String p1,
                              @RequestParam(value = "p2", required = false) String p2) {
+        int age = 10 / 0;
         return "------testHotKey";
     }
 
