@@ -8,11 +8,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: nacos-aliyun.com:8848 #Nacos服务注册中心地址
+        server-addr: txcloud:8848 #Nacos服务注册中心地址
       config:
-        server-addr: nacos-aliyun.com:8848 #Nacos作为配置中心地址
+        server-addr: txcloud:8848 #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
-        group: TEST_GROUP
+        group: DEFAULT_GROUP
         namespace: ba46cc6b-ee75-412e-91a9-01d2084d7192
 
 

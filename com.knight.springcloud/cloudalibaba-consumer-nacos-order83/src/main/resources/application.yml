@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: nacos-aliyun.com:8848  # nacos-aliyun.com 为本地 hosts 配置
+        server-addr: txcloud:8848  # txcloud 为本地 hosts 配置
 
 
 #消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)
