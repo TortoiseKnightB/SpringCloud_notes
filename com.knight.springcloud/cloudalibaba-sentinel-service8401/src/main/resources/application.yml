@@ -8,22 +8,23 @@ spring:
     nacos:
       discovery:
         #Nacos服务注册中心地址
-        server-addr: 47.100.93.224:8848
+        server-addr: txcloud:8848
     sentinel:
       transport:
         #配置Sentinel dashboard地址
-        dashboard: localhost:8080
-        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        dashboard: txcloud:8858   # 服务端连不通本地机器，无法进行监控，可以通过nacos写入持久化的流控规则，或者直接写入代码
+#        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口(指定应用与Sentinel控制台交互的端口，应用本地会起一个该端口占用的HttpServer)
         port: 8719
       datasource:
         ds1:
           nacos:
-            server-addr: 47.100.93.224:8848
+            server-addr: txcloud:8848
             dataId: ${spring.application.name}
             groupId: DEFAULT_GROUP
             data-type: json
-            rule-type: flow
-      web-context-unify: false # 关闭context整合（链路流控时需要添加，不过好像没啥用）
+            rule-type: flow # 持久规则配置部分，自己上网查
+#      web-context-unify: false # 关闭context整合（链路流控时需要添加，不过好像没啥用）
 
 management:
   endpoints:
@@ -41,3 +42,5 @@ management:
 #  strategy：流控模式，0表示直接，1表示关联，2表示链路；
 #  controlBehavior：流控效果，0表示快速失败，1表示Warm Up，2表示排队等待；
 #  clusterMode：是否集群
+
+
