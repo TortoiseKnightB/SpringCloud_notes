@@ -1,5 +1,7 @@
 # SpringCloud_notes
 
+- 感谢[尚硅谷周阳老师的 springcloud 课程](https://b23.tv/Mk7qdDe)，本项目为该课程对应的练手项目，个人稍作修改
+
 - hosts 配置
 
 ```bash
@@ -34,5 +36,3 @@ startup.cmd -m standalone
 - sentinel 和 seata 本地都能正常运行，但是部署到远程服务器后会出现问题，目前看来是因为外部服务器无法访问本地内网。暂时就这样，等以后把具体项目部署到服务器上再说
 
 - 其他更多细节参考[GitHub服务器配置部分](https://github.com/TortoiseKnightB/Horn_of_Plenty)
-
-
