@@ -11,10 +11,10 @@ spring:
         tx-service-group: my_test_tx_group
     nacos:
       discovery:
-        server-addr: 129.226.227.79:8848
+        server-addr: txcloud:8848
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.100.93.224:3306/seata_order
+    url: jdbc:mysql://alicloud:3306/seata_order
     username: root
     password: 123456Ben
 
